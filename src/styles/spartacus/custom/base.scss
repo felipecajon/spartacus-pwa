@@ -1,0 +1,23 @@
+html {
+    font-size: 14px;
+    background-color: $primary;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 120px;
+}
+
+
+.custom-container {
+  max-width: var(--cx-page-width-max);
+  margin: auto;
+  padding: 0 var(--default-gap);
+}
+
+
+.custom-container-no-padding {
+  margin: auto;
+  padding: 0 var(--default-gap);
+}

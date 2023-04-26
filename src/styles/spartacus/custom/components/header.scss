@@ -1,0 +1,147 @@
+$bg-header: unset;
+
+header {
+  background-color: $bg-header;
+  color: var(--text);
+  display: block;
+
+  .cx-hamburger {
+    display: flex;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  cx-site-context-selector select {
+    background-color: $bg-header;
+  }
+}
+
+cx-site-context-selector select {
+  background-color: $bg-header;
+}
+
+header .SiteContext,
+header .SiteLinks {
+  color: var(--text);
+}
+
+cx-mini-cart a {
+  background-color: $bg-header;
+}
+
+
+@media (min-width: 992px) {
+  header .SiteContext:after {
+    border: none;
+  }
+}
+
+.main-header {
+  cx-page-layout cx-page-slot {
+    flex: unset;
+  }
+
+  img,
+  a,
+  span {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.container_2_3 {
+  background-color: var(--gray-100);
+}
+
+.header_section {
+  &_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header_section_1_links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &_2,
+  &_3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+
+  header .SiteContext,
+  header .SiteLinks,
+  header .SiteLogin {
+    background-color: unset;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: var(--bg-primary);
+}
+
+.pre_header {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  cx-mini-cart a {
+    width: unset;
+    flex-direction: row;
+  }
+}
+
+
+cx-mini-cart a {
+  padding: 0;
+  min-width: unset;
+}
+
+header.is-expanded {
+
+  .PreHeader,
+  .navigation {
+    z-index: 11;
+    left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  header.is-expanded:after {
+    z-index: 10;
+  }
+}
+
+@media (max-width: 991.98px) {
+  header.is-expanded:after {
+    background-color: var(--color-white);
+  }
+}
+
+.hamburger.is-active .hamburger-inner,
+.is-active.cx-hamburger .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.is-active.cx-hamburger .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after,
+.is-active.cx-hamburger .hamburger-inner::after {
+  background-color: var(--bg-primary);
+}
+
+.hamburger,
+.cx-hamburger {
+  padding: 0;
+  margin-right: 12px;
+}

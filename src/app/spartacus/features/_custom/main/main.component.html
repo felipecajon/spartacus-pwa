@@ -1,0 +1,48 @@
+<ng-template [cxOutlet]="StorefrontOutlets.STOREFRONT" cxPageTemplateStyle>
+  <ng-template cxOutlet="cx-header">
+    <header
+      cxSkipLink="cx-header"
+      class="main-header"
+      [class.is-expanded]="isExpanded$ | async"
+      (keydown.escape)="collapseMenu()"
+      (click)="collapseMenuIfClickOutside($event)"
+    >
+      <div class="container" style="margin-top: 20px;">
+        <cx-page-layout section="pre_header"></cx-page-layout>
+      </div>
+
+      <div class="container">
+        <div class="header_section_1">
+          <cx-page-layout section="header_section_1_config"></cx-page-layout>
+          <cx-page-layout section="header_section_1_links"></cx-page-layout>
+        </div>
+      </div>
+
+      <div class="container_2_3">
+        <div class="container">
+          <cx-page-layout section="header_section_2"></cx-page-layout>
+          <cx-page-layout section="header_section_3"></cx-page-layout>
+
+          <cx-page-layout section="navigation"></cx-page-layout>
+        </div>
+      </div>
+    </header>
+
+    <cx-page-slot position="BottomHeaderSlot"></cx-page-slot>
+
+    <cx-global-message
+      aria-atomic="true"
+      aria-live="assertive"
+    ></cx-global-message>
+  </ng-template>
+
+  <main cxSkipLink="cx-main">
+    <router-outlet></router-outlet>
+  </main>
+
+  <ng-template cxOutlet="cx-footer">
+    <footer cxSkipLink="cx-footer">
+      <cx-page-layout section="footer"></cx-page-layout>
+    </footer>
+  </ng-template>
+</ng-template>

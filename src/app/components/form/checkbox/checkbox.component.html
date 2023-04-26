@@ -1,0 +1,17 @@
+<div class="form-check {{containerClass}}" [formGroup]="form">
+    <input
+    #checkbox
+    [attr.id]="id"
+    [formControlName]="name"
+    class="form-check-input {{inputClass}}"
+    type="checkbox"
+    />
+
+    <label class="form-check-label {{labelClass}}" [ngClass]="{'is-invalid': hasError}" (click)="markThis()" [attr.for]="id" *ngIf="label">
+      <span [innerHTML]="label"> </span> {{required ? '*' : ''}}
+    </label>
+
+    <div class="invalid-feedback" style="margin-left: -18px;" >
+        {{ getError(name, form) }}
+    </div>
+  </div>

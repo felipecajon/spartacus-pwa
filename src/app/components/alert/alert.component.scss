@@ -1,0 +1,16 @@
+
+.close-alert {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    cursor: pointer;
+}
+
+.alert-primary { background-color: var(--bg-primary); color: var(--color-white); }
+.alert-secondary { background-color: var(--bg-secondary); color: var(--color-white); }
+.alert-success { background-color: var(--bg-success); color: var(--color-success); }
+.alert-danger { background-color: var(--bg-danger); color: var(--color-danger); }
+.alert-warning { background-color: var(--bg-warning); color: var(--color-warning); }
+.alert-info { background-color: var(--bg-info); color: var(--color-info); }
+.alert-default { background-color: var(--bg-default); color: var(--color-default); }

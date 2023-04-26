@@ -1,0 +1,63 @@
+<div class="container mt-5">
+    <p class="h3">
+        Elements Form
+    </p>
+
+    <form [formGroup]="formElements" (submit)="submit()" autocomplete="off">
+        <div class="row">
+            <div class="col col-6">
+                <simpleInput-component id="name" name="name" label="Name" placeholder="..." [form]="formElements" required="true" ></simpleInput-component>
+            </div>
+
+            <div class="col col-6">
+                <simpleInput-component id="email" name="email" label="Email" placeholder="email@dominio.com" [hasIcon]="true"  [form]="formElements" required="true">
+                    <icon-email size="16" ></icon-email>
+                </simpleInput-component>
+            </div>
+
+            <div class="col col-6 mt-3">
+                <datePicker-component id="date" name="date" label="Data de Nascimento" placeholder="dd/mm/aaaa" [form]="formElements" required="true"></datePicker-component>
+            </div>
+
+            <div class="col col-6 mt-3">
+                <simpleInput-component id="phone" name="phone" label="Phone" placeholder="(xx) xxxx-xxxx" [form]="formElements" [mask]="mask_phone_with_cod" required="true"></simpleInput-component>
+            </div>
+
+            <div class="col col-6">
+                <div class="row">
+                    <div class="col col-6 mt-3">
+                        <simpleInput-component type="password" id="password" name="password" label="Senha" placeholder=""  [form]="formElements" required="true"></simpleInput-component>
+                    </div>
+
+                    <div class="col col-6 mt-3">
+                        <simpleInput-component type="password" id="passwordConfirm" name="passwordConfirm" label="Confirme sua senha" placeholder="" [form]="formElements" required="true"></simpleInput-component>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-md-4 mt-3">
+                <app-select id="city" name="city" label="Cidade" [options]="cities" [form]="formElements" required="true"></app-select>
+            </div>
+
+            <div class="col col-md-12 mt-3">
+                <app-radio id="gender" name="gender" label="Gênero" [options]="gender_options" [form]="formElements" required="true"></app-radio>
+            </div>
+
+            <div class="col col-md-12 mt-3">
+                <checkbox-component id="terms" name="terms" [label]="labelTerms" [form]="formElements" required="true"> </checkbox-component>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mt-4">
+                <div class="row d-flex justify-content-end">
+                    <div class="col col-3">
+                        <button type="submit" class="btn w-100 btn-primary" translate>
+                            Enviar Formulário
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

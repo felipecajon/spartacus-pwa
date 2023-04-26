@@ -1,0 +1,24 @@
+<ng-template cxOutletRef="LandingPage2Template" let-model>
+
+  <div class="container">
+    <cx-page-slot position="Section1"></cx-page-slot>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <cx-page-slot position="Section2A"></cx-page-slot>
+      </div>
+
+      <div class="col-6">
+        <cx-page-slot position="Section2B"></cx-page-slot>
+      </div>
+    </div>
+
+  </div>
+
+  <cx-page-slot position="Section2C"></cx-page-slot>
+  <cx-page-slot position="Section3"></cx-page-slot>
+  <cx-page-slot position="Section4"></cx-page-slot>
+  <cx-page-slot position="Section5"></cx-page-slot>
+</ng-template>

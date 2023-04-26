@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <p class="h3">
+        Alerts
+    </p>
+
+    <div class="row">
+        <div class="col-12 mt-3" *ngIf="alertPrimary.isActive">
+            <alert-component [alert]="alertPrimary"></alert-component>
+        </div>
+        
+        <div class="col-12 mt-3" *ngIf="alertSecondary.isActive">
+            <alert-component [alert]="alertSecondary"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertSuccess.isActive">
+            <alert-component [alert]="alertSuccess"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertDanger.isActive">
+            <alert-component [alert]="alertDanger"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertWarning.isActive">
+            <alert-component [alert]="alertWarning"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertInfo.isActive">
+            <alert-component [alert]="alertInfo"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertLight.isActive">
+            <alert-component [alert]="alertLight"></alert-component>
+        </div>
+
+        <div class="col-12 mt-3" *ngIf="alertDark.isActive">
+            <alert-component [alert]="alertDark"></alert-component>
+        </div>
+    </div>
+</div>

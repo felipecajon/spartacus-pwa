@@ -1,0 +1,31 @@
+<div class="form-group {{containerClass}}" [ngClass]="{'has-label': label}" [formGroup]="form">
+    <label [attr.for]="id" class="{{labelClass}}" *ngIf="label">
+        {{label}} {{required ? '*' : ''}}
+    </label>
+
+    <div class="input-group">
+
+      <input
+        [attr.id]="id"
+        [formControlName]="name"
+        class="form-control {{inputClass}}"
+        [ngClass]="classError()"
+        [attr.type]="type"
+        [attr.placeholder]="placeholder"
+        [attr.autocomplete]="autocomplete"
+        [attr.maxLength]="maxLength"
+        [mask]="mask"
+        [dropSpecialCharacters]="false"
+        />
+
+        <div class="input-group-append" *ngIf="hasIcon" >
+            <div class="input-group-text fix-border-radius">
+                <ng-content></ng-content>
+            </div>
+        </div>
+
+        <div class="invalid-feedback" >
+            {{ getError() }}
+        </div>
+    </div>
+</div>

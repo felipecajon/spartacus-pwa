@@ -1,0 +1,15 @@
+<div class="form-group {{containerClass}}" [formGroup]="form">
+    <label [for]="id" class="mb-2 {{labelClass}}" *ngIf="label">
+        {{label}} {{required ? '*' : ''}}
+    </label>
+
+    <select [id]="id " class="form-control {{inputClass}}" [ngClass]="classError()" [formControlName]="name" [attr.aria-label]="label">
+        <option [value]="option.code" *ngFor="let option of options">
+            {{option.value}}
+        </option>
+    </select>
+
+    <div class="invalid-feedback" >
+        {{ getError() }}
+    </div>
+</div>

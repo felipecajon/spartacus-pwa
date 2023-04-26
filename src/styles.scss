@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+$styleVersion: 4.3;
+@import './styles/spartacus/features/index';
+
+// @import "./styles/spartacus/custom/layout/index";
+// @import "./styles/spartacus/custom/variables.scss";
+// @import './styles/spartacus/custom/base.scss';
+// @import "./styles/spartacus/custom/utilities/index";
+// @import "./styles/spartacus/custom/components/index";
+
+$styleVersion: 4.3;
+@import '~@spartacus/styles/index';

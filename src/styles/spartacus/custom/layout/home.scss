@@ -1,0 +1,12 @@
+cx-page-layout.LandingPage2Template cx-page-slot.Section1 {
+  max-width: unset;
+  margin: unset;
+  margin-top: unset;
+}
+
+cx-page-layout.LandingPage2Template cx-page-slot.Section2A,
+cx-page-layout.LandingPage2Template cx-page-slot.Section2B {
+  --cx-flex-basis: unset;
+  max-width: unset;
+  flex-wrap: nowrap;
+}

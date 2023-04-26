@@ -1,0 +1,11 @@
+$env            = Online
+$contentCatalog = electronics-spaContentCatalog
+$productCatalog = vivoProductCatalog
+$lang           = pt
+
+$contentCV      = catalogVersion(CatalogVersion.catalog(Catalog.id[default = $contentCatalog]),CatalogVersion.version[default = $env])[default = $contentCatalog:$env]
+$productCV      = catalogVersion(CatalogVersion.catalog(Catalog.id[default = $productCatalog]),CatalogVersion.version[default = $env])[default = $productCatalog:$env]
+
+
+INSERT_UPDATE ContentSlot ; $contentCV[unique = true] ; uid[unique = true]    ; cmsComponents(uid, $contentCV)          ;
+                          ;                           ; Section1Slot-Homepage ; ElectronicsHompageSplashBannerComponent ;
